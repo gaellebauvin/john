@@ -1,0 +1,157 @@
+/* definition des couleurs */
+:root {
+    --dark-green: #2B4333;
+    --light-green: #43644B;
+    --white: #F6F3ED;
+    --pink: #F5B3B1;
+    --yellow: #FECD70;
+    --purple: #C0B4D9;
+    --saumon : #F8907E;
+}
+
+/* definition des typo */
+h1 {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 5em;
+    line-height: 104;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.h1-variante {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 500;
+    font-style: initial;
+}
+
+h2 {
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 700;
+    font-size: 3em;
+    line-height: 62;
+    font-style: italic;
+}
+
+.h2-variante {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 500;
+    font-style: initial;
+}
+
+h3 {
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 700;
+    font-size: 2em;
+    line-height: 42;
+    font-style: italic;
+}
+
+h4 {
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 1.5em;
+    line-height: 31;
+}
+
+h5 {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 1.25em;
+    line-height: 26;
+    font-weight: 700;
+    font-style: italic;
+}
+
+p {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.125em;
+    line-height: 28;
+    font-weight: 500;
+}
+
+a {
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 28;
+    font-size: 1.125em;
+    color : var(--light-green);
+}
+
+a:active {
+    color : var(--light-green);
+}
+
+.name-artist {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    color : var(--white);
+    margin-left: -100%;
+}
+
+.btn-title {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.5em;
+    line-height: 28;
+    font-weight: 500;
+}
+
+.card-content {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    line-height: 22;
+}
+
+.temoignage {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-style: italic;
+    font-size: 1em;
+    line-height: 22;
+    font-weight: 400;
+}
+
+.asterisque {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.875em;
+    line-height: 22;
+    font-weight: 400;
+}
+
+.up-title-card {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    font-size: 0.875em;
+    line-height: 22;
+}
+
+/* definition des differents etats des btn */
+.btn {
+    width: 248px;
+    height: 23px;
+    border : solid 1px var(--dark-green);
+    color : var(--dark-green);
+    background-color: white;
+}
+
+.btn:hover {
+    background-color: var(--dark-green);
+    color : var(--white);
+}
+
+.btn:active {
+    background-color: var(--light-green);
+    color : var(--white);
+}
+
+/* creation de class pratiques */
+
+.d-none {
+    display: none;
+}
+
+.d-flex {
+    display: flex;
+}

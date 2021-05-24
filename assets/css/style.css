@@ -1,0 +1,46 @@
+#lottie{
+    height:100%;
+    display:block;
+    overflow: hidden;
+    transform: translate3d(0,0,0);
+    text-align: center;
+    opacity: 1;
+    width: 99vh;
+    margin: auto;
+    background-color: var(--dark-green);
+}
+
+body {
+    background-color: #2B4333;
+    overflow: hidden;
+}
+
+.entry {
+    height: 100vh;
+    width: 50%;
+    margin : auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+.entry img {
+    width: 156px;
+    margin: auto;
+    z-index: 2;
+}
+
+.entry i {
+    margin: 0 40px 0 40px;
+    font-style: initial;
+}
+
+.background-green {
+    width: 68%;
+    height: 10%;
+    left: -50%;
+    z-index: 1;
+    background-color: var(--pink);
+    position: absolute;
+}
