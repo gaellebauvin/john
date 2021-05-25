@@ -15,32 +15,266 @@ body {
     overflow: hidden;
 }
 
+.animation {
+    width: 100%;
+    position: relative;
+    height: 100vh;
+}
+
 .entry {
     height: 100vh;
     width: 50%;
     margin : auto;
     display: flex;
-    align-items: center;
-    position: relative;
-    justify-content: center;
+    flex-direction: column;
 }
 
-.entry img {
+.entry-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.entry-img {
+    width: 50%;
+    z-index: 4;
+    text-align: center;
+}
+
+.entry-img img {
     width: 156px;
-    margin: auto;
-    z-index: 2;
 }
 
 .entry i {
-    margin: 0 40px 0 40px;
+    margin-right: 10%;
     font-style: initial;
 }
 
 .background-green {
-    width: 68%;
+    width: 88%;
     height: 10%;
     left: -50%;
     z-index: 1;
-    background-color: var(--pink);
+    background-color: var(--dark-green);
     position: absolute;
+}
+
+.name-artist-animation {
+    animation-duration: 2s;
+    animation-name: slidein;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+.artist-animation {
+    animation-duration: 0.5s;
+    animation-name: slide_in_right;
+    animation-fill-mode: forwards;
+}
+
+.artist {
+    color : var(--dark-green);
+    width : 10%;
+}
+
+@keyframes slide_in_right {
+    from {
+        width: 10%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes slidein {
+    from {
+        margin-left: -130%;
+        color : var(--white);
+    }
+
+    to {
+        margin-left: 0;
+        color : var(--white);
+    }
+}
+
+.puzzle {
+    position: absolute;
+    width: 100%;
+}
+
+.puzzle-piece {
+    position: relative;
+    z-index : 4;
+    width: 6em;
+    height: 6em;
+    margin: 50px;
+    border-radius: .5em;
+    background-image: url("../img/puzzle_entier_grand.png");
+}
+
+.puzzle-piece .t {
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    top: -12%;
+    left: 35%;
+    border-radius: 60%;
+    z-index : 3;
+    background-color: var(--dark-green);
+}
+
+.puzzle-piece .r {
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    top: 35%;
+    left: 80%;
+    border-radius: 60%;
+    z-index : 3;
+    background-color: var(--dark-green);
+}
+
+.puzzle-piece .b {
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    top: 85%;
+    left: 35%;
+    -webkit-border-radius: 4em;
+    -moz-border-radius: 4em;
+    border-radius: 60%;
+    background-color: var(--dark-green);
+}
+
+.puzzle-piece .l {
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    top: 35%;
+    left: -10%;
+    border-radius: 60%;
+    background-color: var(--dark-green);
+}
+
+.btn-discover {
+    margin-top: -20% ;
+    margin-right: auto;
+    margin-left : auto;
+    padding: 16px 24px 18px;
+    border : 1px solid var(--white);
+    background-color: var(--dark-green);
+    color : var(--white);
+}
+
+.btn-discover:hover {
+    background-color: var(--white);
+    color : var(--dark-green);
+}
+
+.puzzle-animation {
+    animation-name: fullscreen;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fullscreen {
+   from {
+       width: 100%;
+   }
+    to {
+        left : 0;
+        top : 0;
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-image: url("../img/puzzle_entier_grand.png");
+        margin :0;
+        zoom : 150%;
+    }
+}
+
+.agrandissement-t {
+    animation-name: agrandissement-t;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.agrandissement-r {
+    animation-name: agrandissement-r;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.agrandissement-b {
+    animation-name: agrandissement-b;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.agrandissement-l {
+    animation-name: agrandissement-l;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes agrandissement-t {
+    from {
+        width: 100%;
+    }
+    to {
+        top : -30%;
+    }
+}
+
+@keyframes agrandissement-r {
+    from {
+        width: 100%;
+    }
+    to {
+        left : 100%;
+    }
+}
+
+@keyframes agrandissement-b {
+    from {
+        width: 100%;
+    }
+    to {
+        top : 100%;
+    }
+}
+
+@keyframes agrandissement-l {
+    from {
+        width: 100%;
+    }
+    to {
+        left : -30%;
+    }
+}
+
+.row-down {
+    transform: rotate(90deg);
+    width: 100px;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    z-index :6;
+    animation-name: arrow-move;
+    animation-duration: 0.4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes arrow-move {
+    from {
+        top : 90%;
+    }
+    to {
+        top : 93%
+    }
 }

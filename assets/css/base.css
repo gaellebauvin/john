@@ -87,14 +87,12 @@ a:active {
     font-size: 48px;
     font-style: normal;
     font-weight: 600;
-    color : var(--white);
-    margin-left: -100%;
+    margin-left: -130%;
 }
 
 .btn-title {
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 1.5em;
-    line-height: 28;
     font-weight: 500;
 }
 
@@ -102,7 +100,6 @@ a:active {
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: bold;
     font-size: 1.5em;
-    line-height: 22;
 }
 
 .temoignage {

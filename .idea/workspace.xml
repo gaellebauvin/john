@@ -2,24 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e1c7779-0ca3-4f34-9b10-8791dbbe2773" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/base.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/Logo_john.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/img_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/img_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/img_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/img_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/img_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/img_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/img_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/img_7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/img_8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/logo_john_white.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/arrow-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/puzzle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/puzzle_entier_grand.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/lottie.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,5 +84,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
