@@ -11,14 +11,16 @@
 }
 
 body {
-    background-color: #2B4333;
-    overflow: hidden;
+    overflow : hidden;
+    scroll-margin-top : 0;
+    background-color: var(--dark-green);
 }
 
 .animation {
     width: 100%;
     position: relative;
     height: 100vh;
+    overflow: hidden;
 }
 
 .entry {
@@ -75,7 +77,6 @@ body {
 
 .artist {
     color : var(--dark-green);
-    width : 10%;
 }
 
 @keyframes slide_in_right {
@@ -186,14 +187,12 @@ body {
     to {
         left : 0;
         top : 0;
-        width: 100%;
-        height: 100vh;
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: bottom;
+        background-position: center;
         background-image: url("../img/puzzle_entier_grand.png");
-        margin :0;
-        zoom : 150%;
+        margin-right: auto;
+        margin-left: auto;
     }
 }
 
@@ -277,4 +276,38 @@ body {
     to {
         top : 93%
     }
+}
+
+.logo {
+    position: absolute;
+    margin: auto;
+    left: 47%;
+    top: 2%;
+}
+
+.background-fade-in {
+    animation-duration: 0.25s;
+    animation-name: background-fade-in;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes background-fade-in {
+    from {
+        width: 100%;
+    }
+    to {
+        background-color: var(--white);
+    }
+}
+
+.content {
+    z-index: 9;
+    margin-top: -15%;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(246, 244, 237, 0) 2.25%, #F6F4ED 43.58%);
+}
+
+.content-title {
+    text-align: center;
 }

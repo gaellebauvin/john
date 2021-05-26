@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e1c7779-0ca3-4f34-9b10-8791dbbe2773" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/img/arrow-right.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/puzzle.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/puzzle_entier_grand.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/base.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
@@ -68,6 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1621844174865</updated>
       <workItem from="1621844175939" duration="18006000" />
+      <workItem from="1622012758837" duration="4390000" />
     </task>
     <servers />
   </component>

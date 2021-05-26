@@ -13,7 +13,8 @@
 h1 {
     font-family: 'IBM Plex Serif', serif;
     font-size: 5em;
-    line-height: 104;
+    /*line-height: 104;*/
+    color: var(--dark-green);
     font-weight: 700;
     font-style: italic;
 }
@@ -87,7 +88,6 @@ a:active {
     font-size: 48px;
     font-style: normal;
     font-weight: 600;
-    margin-left: -130%;
 }
 
 .btn-title {
