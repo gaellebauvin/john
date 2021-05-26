@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e1c7779-0ca3-4f34-9b10-8791dbbe2773" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/img/celebration.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/entree_de_jeu.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/link.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/mi_temps.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/partie.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/base.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
@@ -39,7 +44,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../wamp/www/ecv-2021" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -65,7 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1621844174865</updated>
       <workItem from="1621844175939" duration="18006000" />
-      <workItem from="1622012758837" duration="4390000" />
+      <workItem from="1622012758837" duration="34490000" />
     </task>
     <servers />
   </component>

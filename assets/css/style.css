@@ -303,11 +303,164 @@ body {
 
 .content {
     z-index: 9;
-    margin-top: -15%;
+    position: relative;
+    margin-top: -70%;
+    padding-top: 70%;
     width: 100%;
     background: linear-gradient(180deg, rgba(246, 244, 237, 0) 2.25%, #F6F4ED 43.58%);
 }
 
+.content-intro {
+    height: 100vh;
+}
+
 .content-title {
     text-align: center;
+    margin-bottom: 5%;
+}
+
+.content-column {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-left {
+    width: 47%;
+    padding : 0 5%;
+}
+
+.content-right {
+    width: 38%;
+    padding : 0 5%;
+}
+
+.bonne-raison-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.all-bonnes-raisons {
+    display: flex;
+    flex-wrap: wrap;
+    width: 65%;
+    margin: auto;
+    justify-content: center;
+}
+
+.bonne-raison {
+    width: 23%;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.raison-asterisque {
+    margin: auto;
+}
+
+.content-explication {
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.test {
+    height: 400vw;
+}
+
+.anime-card {
+    position: absolute;
+    z-index : 99;
+    padding : 48px 32px 115px;
+    border-radius: 32px;
+    width: 17%;
+}
+
+.anime-card .text-card, .anime-card .asterisque {
+    text-align: left;
+}
+
+.anime-card .asterisque {
+    margin-bottom: 15%;
+}
+
+.anime-card-1 {
+    bottom : -60%;
+    left : 15%;
+    background-color: var(--pink);
+}
+
+.anime-card-2 {
+    bottom : -75%;
+    left : 60%;
+    background-color: var(--yellow);
+}
+
+.anime-card-3 {
+    bottom : -100%;
+    left : 20%;
+    background-color: var(--purple);
+}
+
+.anime-card-3 img {
+    margin-top: 2%;
+    left : 0;
+}
+
+.anime-card-2 img {
+    right: 8%;
+}
+
+.anime-card-4 {
+    bottom : -195%;
+    left : 70%;
+    background-color: var(--saumon);
+}
+
+.all-explication {
+    position: relative;
+}
+
+.explication-img {
+    position: absolute;
+    right: -3%;
+    bottom: 0;
+}
+
+.content-explication-fixed {
+    animation-name: content-explication-fixed;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes content-explication-fixed {
+    from {
+        opacity: 100%;
+    }
+    to {
+        opacity: 50%;
+    }
+}
+
+.content-explication-relative {
+    animation-name: content-explication-relative;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes content-explication-relative {
+    from {
+        opacity: 50%;
+    }
+    to {
+        opacity: 100%;
+    }
 }
