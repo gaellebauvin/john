@@ -373,12 +373,11 @@ body {
 }
 
 .test {
-    height: 400vw;
+    height: 300vw;
 }
 
 .anime-card {
     position: absolute;
-    z-index : 99;
     padding : 48px 32px 115px;
     border-radius: 32px;
     width: 17%;
@@ -435,32 +434,105 @@ body {
     bottom: 0;
 }
 
-.content-explication-fixed {
-    animation-name: content-explication-fixed;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
+.temoignage-content {
+    width: 80%;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
 }
 
-@keyframes content-explication-fixed {
-    from {
-        opacity: 100%;
-    }
-    to {
-        opacity: 50%;
-    }
+.temoignage-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 5%;
 }
 
-.content-explication-relative {
-    animation-name: content-explication-relative;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
+.temoignage-title h2 {
+    margin: 0;
 }
 
-@keyframes content-explication-relative {
-    from {
-        opacity: 50%;
-    }
-    to {
-        opacity: 100%;
-    }
+.arrows {
+    display: flex;
+    justify-content: space-around;
+}
+
+.arrows img {
+    padding: 10%;
+}
+
+.temoignage-single {
+    width: 50%;
+    padding: 40px 48px;
+    border-radius: 24px;
+    margin-right : 5%;
+}
+
+.temoignage-personne {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+}
+
+.temoignage-personne-photo {
+    width: 64px;
+    height: 64px;
+    margin-right: 5%;
+}
+
+.temoignage-personne-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.temoignage-personne-name p {
+    margin: 0;
+}
+
+.temoignage-single-1 {
+    background-color: var(--pink);
+}
+
+.temoignage-single-2 {
+    background-color: var(--purple);
+}
+
+.temoignage-single-3 {
+    background-color: var(--yellow);
+}
+
+.temoignage-single-4 {
+    background-color: var(--saumon);
+}
+
+.caroussel {
+    display: flex;
+    position: absolute;
+    width: 265%;
+    left: 0;
+}
+
+.all-point {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    top: 60%;
+    position: absolute;
+    right: 0;
+    width: 10%;
+}
+
+.point {
+    width: 12px;
+    height: 12px;
+    background-color : var(--dark-green);
+    opacity: 0.2;
+    border-radius: 4px;
+    padding: 2%;
+}
+
+.point-1 {
+    opacity: 1;
 }

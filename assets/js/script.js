@@ -17,8 +17,8 @@ $('.animation').mouseover(function (event) {
     var Y = event.pageY;
     var puzzle = $('.puzzle-piece');
     puzzle.css("background-position", X + "px" + " " + Y + "px");
-    puzzle.css("left", X+"px");
-    puzzle.css("top", Y+"px");
+    puzzle.css("left", X + "px");
+    puzzle.css("top", Y + "px");
 });
 
 $('.btn-discover').on('click', function () {
@@ -34,10 +34,10 @@ $('.btn-discover').on('click', function () {
     $('.row-down').delay(2000).removeClass('d-none');
     $('.animation').css('position', 'fixed');
     $('.puzzle-animation').animate({
-        height : '100vh', width : '100%', marginTop : 0
+        height: '100vh', width: '100%', marginTop: 0
     })
     $('body').css('overflow', 'initial');
-    $('.background-grey').css({'height' : '200vw'});
+    $('.background-grey').css({'height': '200vw'});
 
     $('.background-grey').addClass('background-fade-in');
 
@@ -54,16 +54,16 @@ $(window).on('scroll', function () {
     var imageMargin = 0;
     var titlePosition = $('.content-title').offset().top;
     var ExplicationPosition = $('.text-explication').offset().top;
-    var elementMiddle = windowScroll >= (titlePosition-middlePage);
-    var ExplicationMiddle = windowScroll > (ExplicationPosition-middlePage);
+    var elementMiddle = windowScroll >= (titlePosition - middlePage);
+    var ExplicationMiddle = windowScroll > (ExplicationPosition - middlePage);
     var stopScroll = windowScroll <= ExplicationPosition;
 
     //reduire l'img
-    if (imageWidth >= 500 ){
-        var newHeight = imageHeight - (windowScroll/200);
-        var newWidth = imageWidth - (windowScroll/50);
-        var newMargin = imageMargin + (windowScroll/9);
-        $('.puzzle-animation').css({'height': newHeight, 'width' : newWidth, 'margin-top' : newMargin});
+    if (imageWidth >= 500) {
+        var newHeight = imageHeight - (windowScroll / 200);
+        var newWidth = imageWidth - (windowScroll / 50);
+        var newMargin = imageMargin + (windowScroll / 9);
+        $('.puzzle-animation').css({'height': newHeight, 'width': newWidth, 'margin-top': newMargin});
     } else if (imageWidth < 500) {
         $('.content').removeClass('d-none');
         $('body').css('background', 'var(--white)');
@@ -71,41 +71,77 @@ $(window).on('scroll', function () {
 
     //faire sortir l'img
     if (elementMiddle && imageWidth < 500 && windowScroll !== titlePosition) {
-        var newTop = -(windowScroll/4.5);
+        var newTop = -(windowScroll / 4.5);
         $('.puzzle').css('top', newTop);
         $('.logo').css('z-index', '99');
     }
 
     //partie arret sur comment ça marche
-    if ( ExplicationMiddle && windowScroll !== ExplicationPosition) {
-        if(animationTerminate === false) {
+    if (ExplicationMiddle && windowScroll !== ExplicationPosition) {
+        if (animationTerminate === false) {
             var off = $('.anime-card').offset().top
             $('.anime-card').data('orig-offset', off);
             animationTerminate = true;
         }
         var off = $('.anime-card').data('orig-offset');
-        var translate = -(( windowScroll - off ) / $(window).height()*100);
+        var translate = -((windowScroll - off) / $(window).height() * 100);
 
+        var bottomCard = ($('.anime-card-4').offset().top) + ($('.anime-card-4').height());
 
-        var heightDiv = $(window).height();
-        console.log(heightDiv);
-        console.log(translate);
-        if (translate >= -10) {
-            $('.content-explication').removeClass('content-explication-fixed').addClass('content-explication-relative').css({"position" : "relative"});
+        if (windowScroll >= bottomCard || translate >= 10) {
+            if (windowScroll >= bottomCard) {
+                $('.content-explication').css({
+                    "position": "relative",
+                    "opacity" : 1
+                });
+                $('.temoignage-content').removeClass('d-none');
+                $('.test').addClass('d-none');
+                $('.all-card').addClass('d-none');
+            } else {
+                $('.content-explication').css({
+                    "position": "relative",
+                    "opacity" : 1
+                });
+                $('.test').removeClass('d-none');
+                $('.all-card').removeClass('d-none');
+            }
         } else {
-            $('.content-explication').css({"position" : "fixed", "top" : 0, "left" : 0});
-            $('.content-explication h1').addClass('content-explication-fixed');
+            $('.content-explication').css({
+                "position": "fixed",
+                "top": 0,
+                "left": 0,
+                "opacity" : 0.5
+            });
         }
 
         $('.sous-titre').addClass('content-explication-fixed');
-        $('.anime-card').removeClass('d-none').css('transform', 'translateY('+ translate+'%)');
-
-    } else {
-
+        $('.anime-card').removeClass('d-none').css('transform', 'translateY(' + translate + '%)');
     }
 
     $('.row-down').addClass('d-none');
 })
 
-$(document).ready(function () {
+//animation du caroussel
+var positonLeft = 0;
+var nbrClick = 1;
+$('#arrow-right').on('click',function () {
+    if (nbrClick < 4) {
+        positonLeft = positonLeft - 66;
+        $('.caroussel').css({'left': positonLeft +'%'});
+        $('.point').css('opacity', 0.2);
+        nbrClick = nbrClick + 1;
+        $('.point-'+nbrClick).css('opacity',1);
+        console.log(nbrClick);
+    }
+});
+
+$('#arrow-left').on('click',function () {
+    if (nbrClick > 1) {
+        positonLeft = positonLeft + 66;
+        $('.caroussel').css({'left': positonLeft +'%'});
+        $('.point').css('opacity', 0.2);
+        nbrClick = nbrClick - 1;
+        $('.point-'+nbrClick).css('opacity',1);
+        console.log(nbrClick);
+    }
 });
