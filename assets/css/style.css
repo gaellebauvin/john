@@ -14,6 +14,7 @@ body {
     overflow : hidden;
     scroll-margin-top : 0;
     background-color: var(--dark-green);
+    overflow-x: hidden;
 }
 
 .animation {
@@ -436,7 +437,7 @@ body {
 
 .temoignage-content {
     width: 80%;
-    height: 100vh;
+    height: 65vh;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -518,7 +519,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    top: 60%;
+    top: 85%;
     position: absolute;
     right: 0;
     width: 10%;
@@ -535,4 +536,17 @@ body {
 
 .point-1 {
     opacity: 1;
+}
+
+.puzzle-content {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.puzzle-achat {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 38%;
 }

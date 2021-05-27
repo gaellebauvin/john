@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e1c7779-0ca3-4f34-9b10-8791dbbe2773" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/img/arrow-left.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/temoignage/charly.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/temoignage/josephine.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/temoignage/marie.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/temoignage/milena.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/boite_puzzle.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/base.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
@@ -55,8 +51,8 @@
       <recent name="C:\Users\gbauv\PhpstormProjects\workshop\assets\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\gbauv\PhpstormProjects\workshop\assets\img\temoignage" />
       <recent name="C:\Users\gbauv\PhpstormProjects\workshop\assets\img" />
+      <recent name="C:\Users\gbauv\PhpstormProjects\workshop\assets\img\temoignage" />
       <recent name="C:\Users\gbauv\PhpstormProjects\workshop\assets\font" />
       <recent name="C:\Users\gbauv\PhpstormProjects\workshop" />
       <recent name="C:\Users\gbauv\PhpstormProjects\workshop\assets" />
@@ -72,7 +68,7 @@
       <updated>1621844174865</updated>
       <workItem from="1621844175939" duration="18006000" />
       <workItem from="1622012758837" duration="34508000" />
-      <workItem from="1622099063324" duration="13028000" />
+      <workItem from="1622099063324" duration="15747000" />
     </task>
     <servers />
   </component>

@@ -90,26 +90,26 @@ $(window).on('scroll', function () {
 
         if (windowScroll >= bottomCard || translate >= 10) {
             if (windowScroll >= bottomCard) {
-                $('.content-explication').css({
-                    "position": "relative",
-                    "opacity" : 1
-                });
                 $('.temoignage-content').removeClass('d-none');
                 $('.test').addClass('d-none');
                 $('.all-card').addClass('d-none');
             } else {
-                $('.content-explication').css({
-                    "position": "relative",
-                    "opacity" : 1
-                });
                 $('.test').removeClass('d-none');
                 $('.all-card').removeClass('d-none');
             }
+            $('.content-explication').css({
+                "position": "relative"
+            });
+            $('.content-explication h1, .content-explication p').css({
+                "opacity" : 1
+            });
         } else {
             $('.content-explication').css({
                 "position": "fixed",
                 "top": 0,
                 "left": 0,
+            });
+            $('.content-explication h1, .content-explication p').css({
                 "opacity" : 0.5
             });
         }
