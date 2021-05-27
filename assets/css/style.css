@@ -1,8 +1,9 @@
-#lottie{
-    height:100%;
-    display:block;
+/* Animation du logo de chargement de la page */
+#lottie {
+    height: 100%;
+    display: block;
     overflow: hidden;
-    transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
     text-align: center;
     opacity: 1;
     width: 99vh;
@@ -11,12 +12,12 @@
 }
 
 body {
-    overflow : hidden;
-    scroll-margin-top : 0;
+    overflow: hidden;
+    scroll-margin-top: 0;
     background-color: var(--dark-green);
-    overflow-x: hidden;
 }
 
+/* Animation du debut */
 .animation {
     width: 100%;
     position: relative;
@@ -27,7 +28,7 @@ body {
 .entry {
     height: 100vh;
     width: 50%;
-    margin : auto;
+    margin: auto;
     display: flex;
     flex-direction: column;
 }
@@ -77,7 +78,7 @@ body {
 }
 
 .artist {
-    color : var(--dark-green);
+    color: var(--dark-green);
 }
 
 @keyframes slide_in_right {
@@ -92,15 +93,16 @@ body {
 @keyframes slidein {
     from {
         margin-left: -130%;
-        color : var(--white);
+        color: var(--white);
     }
 
     to {
         margin-left: 0;
-        color : var(--white);
+        color: var(--white);
     }
 }
 
+/* Piece du puzzle qui suit la souris */
 .puzzle {
     position: absolute;
     width: 100%;
@@ -108,7 +110,7 @@ body {
 
 .puzzle-piece {
     position: relative;
-    z-index : 4;
+    z-index: 4;
     width: 6em;
     height: 6em;
     margin: 50px;
@@ -123,7 +125,7 @@ body {
     top: -12%;
     left: 35%;
     border-radius: 60%;
-    z-index : 3;
+    z-index: 3;
     background-color: var(--dark-green);
 }
 
@@ -134,7 +136,7 @@ body {
     top: 35%;
     left: 80%;
     border-radius: 60%;
-    z-index : 3;
+    z-index: 3;
     background-color: var(--dark-green);
 }
 
@@ -160,20 +162,24 @@ body {
     background-color: var(--dark-green);
 }
 
+/* Bouton decouvrir la collab */
+
 .btn-discover {
-    margin-top: -20% ;
+    margin-top: -20%;
     margin-right: auto;
-    margin-left : auto;
+    margin-left: auto;
     padding: 16px 24px 18px;
-    border : 1px solid var(--white);
+    border: 1px solid var(--white);
     background-color: var(--dark-green);
-    color : var(--white);
+    color: var(--white);
 }
 
 .btn-discover:hover {
     background-color: var(--white);
-    color : var(--dark-green);
+    color: var(--dark-green);
 }
+
+/* Animation fait grandir la piece du puzzle */
 
 .puzzle-animation {
     animation-name: fullscreen;
@@ -182,12 +188,12 @@ body {
 }
 
 @keyframes fullscreen {
-   from {
-       width: 100%;
-   }
+    from {
+        width: 100%;
+    }
     to {
-        left : 0;
-        top : 0;
+        left: 0;
+        top: 0;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -226,7 +232,7 @@ body {
         width: 100%;
     }
     to {
-        top : -30%;
+        top: -30%;
     }
 }
 
@@ -235,7 +241,7 @@ body {
         width: 100%;
     }
     to {
-        left : 100%;
+        left: 100%;
     }
 }
 
@@ -244,7 +250,7 @@ body {
         width: 100%;
     }
     to {
-        top : 100%;
+        top: 100%;
     }
 }
 
@@ -253,17 +259,18 @@ body {
         width: 100%;
     }
     to {
-        left : -30%;
+        left: -30%;
     }
 }
 
+/* Fleche qui monte et qui descend sur la puzzle */
 .row-down {
     transform: rotate(90deg);
     width: 100px;
     position: absolute;
     top: 90%;
     left: 50%;
-    z-index :6;
+    z-index: 6;
     animation-name: arrow-move;
     animation-duration: 0.4s;
     animation-iteration-count: infinite;
@@ -272,13 +279,14 @@ body {
 
 @keyframes arrow-move {
     from {
-        top : 90%;
+        top: 90%;
     }
     to {
-        top : 93%
+        top: 93%
     }
 }
 
+/* Logo John */
 .logo {
     position: absolute;
     margin: auto;
@@ -302,6 +310,8 @@ body {
     }
 }
 
+/* La partie contenu du site */
+/* introduction */
 .content {
     z-index: 9;
     position: relative;
@@ -309,6 +319,7 @@ body {
     padding-top: 70%;
     width: 100%;
     background: linear-gradient(180deg, rgba(246, 244, 237, 0) 2.25%, #F6F4ED 43.58%);
+    overflow: hidden;
 }
 
 .content-intro {
@@ -329,14 +340,15 @@ body {
 
 .content-left {
     width: 47%;
-    padding : 0 5%;
+    padding: 0 5%;
 }
 
 .content-right {
     width: 38%;
-    padding : 0 5%;
+    padding: 0 5%;
 }
 
+/* Partie bonnes raisons */
 .bonne-raison-content {
     display: flex;
     flex-direction: column;
@@ -363,6 +375,7 @@ body {
     margin: auto;
 }
 
+/* explication du principe / Animation des cards */
 .content-explication {
     height: 100vh;
     width: 100%;
@@ -373,13 +386,17 @@ body {
     text-align: center;
 }
 
-.test {
-    height: 300vw;
+.all-card {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    padding-right: 1%;
 }
 
 .anime-card {
     position: absolute;
-    padding : 48px 32px 115px;
+    padding: 48px 32px 115px;
     border-radius: 32px;
     width: 17%;
 }
@@ -393,26 +410,26 @@ body {
 }
 
 .anime-card-1 {
-    bottom : -60%;
-    left : 15%;
+    bottom: -63%;
+    left: 15%;
     background-color: var(--pink);
 }
 
 .anime-card-2 {
-    bottom : -75%;
-    left : 60%;
+    bottom: -75%;
+    left: 60%;
     background-color: var(--yellow);
 }
 
 .anime-card-3 {
-    bottom : -100%;
-    left : 20%;
+    bottom: -130%;
+    left: 20%;
     background-color: var(--purple);
 }
 
 .anime-card-3 img {
     margin-top: 2%;
-    left : 0;
+    left: 0;
 }
 
 .anime-card-2 img {
@@ -420,8 +437,8 @@ body {
 }
 
 .anime-card-4 {
-    bottom : -195%;
-    left : 70%;
+    bottom: -195%;
+    left: 70%;
     background-color: var(--saumon);
 }
 
@@ -434,6 +451,8 @@ body {
     right: -3%;
     bottom: 0;
 }
+
+/* Partie témoignage / Slider */
 
 .temoignage-content {
     width: 80%;
@@ -468,7 +487,7 @@ body {
     width: 50%;
     padding: 40px 48px;
     border-radius: 24px;
-    margin-right : 5%;
+    margin-right: 5%;
 }
 
 .temoignage-personne {
@@ -528,7 +547,7 @@ body {
 .point {
     width: 12px;
     height: 12px;
-    background-color : var(--dark-green);
+    background-color: var(--dark-green);
     opacity: 0.2;
     border-radius: 4px;
     padding: 2%;
@@ -538,6 +557,7 @@ body {
     opacity: 1;
 }
 
+/* Partie achat du puzzle */
 .puzzle-content {
     display: flex;
     flex-direction: row;
@@ -548,4 +568,17 @@ body {
     flex-direction: column;
     margin: 0 auto;
     width: 38%;
+}
+
+.puzzle-achat a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.anime-card-5 {
+    height: 100vh;
+    position: absolute;
+    bottom: -300%;
+    color : var(--white);
 }

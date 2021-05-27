@@ -12,6 +12,8 @@ $(window).load(function () {
     });
 });
 
+
+//animation de la piece de puzzle qui suit la souris
 $('.animation').mouseover(function (event) {
     var X = event.pageX;
     var Y = event.pageY;
@@ -21,6 +23,7 @@ $('.animation').mouseover(function (event) {
     puzzle.css("top", Y + "px");
 });
 
+//animation btn qui agrandit la piece de puzzle
 $('.btn-discover').on('click', function () {
     $('.entry').css('display', 'none');
     $('.puzzle-piece').addClass('puzzle-animation');
@@ -44,8 +47,7 @@ $('.btn-discover').on('click', function () {
     $('.logo').removeClass('d-none');
 });
 
-var animationTerminate = false;
-var isFixed = false;
+var scrollTop = false;
 
 $(window).on('scroll', function () {
     var windowScroll = $(window).scrollTop();
@@ -57,7 +59,6 @@ $(window).on('scroll', function () {
     var ExplicationPosition = $('.text-explication').offset().top;
     var elementMiddle = windowScroll >= (titlePosition - middlePage);
     var ExplicationMiddle = windowScroll > (ExplicationPosition - middlePage);
-    var stopScroll = windowScroll <= ExplicationPosition;
 
     //reduire l'img
     if (imageWidth >= 500) {
@@ -72,56 +73,21 @@ $(window).on('scroll', function () {
 
     //faire sortir l'img
     if (elementMiddle && imageWidth < 500 && windowScroll !== titlePosition) {
-        var newTop = -(windowScroll / 4.5);
+        var newTop = -(windowScroll * 3);
+        $('.background-grey').css('height', '20vw');
         $('.puzzle').css('top', newTop);
-        $('.logo').css('z-index', '99');
+        $('.logo').css('z-index', '9');
+
+
+        if (scrollTop === false) {
+            scrollToTop();
+            scrollTop = true;
+        }
     }
 
-    //partie arret sur comment ça marche
-    if (ExplicationMiddle && windowScroll !== ExplicationPosition) {
-        if (animationTerminate === false) {
-            var off = $('.anime-card').offset().top
-            $('.anime-card').data('orig-offset', off);
-            animationTerminate = true;
-        }
-        var off = $('.anime-card').data('orig-offset');
-        var translate = -((windowScroll - off) / $(window).height() * 100);
-
-        var bottomCard = ($('.anime-card-4').offset().top) + ($('.anime-card-4').height());
-
-        if (windowScroll >= bottomCard) {
-            $('.temoignage-content').removeClass('d-none');
-            $('.test').addClass('d-none');
-            $('.all-card').addClass('d-none');
-            $('.content-explication').css({
-                "position": "relative"
-            });
-            $('.content-explication h1, .content-explication p').css({
-                "opacity": 1
-            });
-
-            if (isFixed === false) {
-                $('html, body').animate({
-                    scrollTop: $(".all-explication").offset().top
-                }, 1);
-                console.log($(".all-explication").offset().top);
-                console.log(windowScroll);
-                console.log(bottomCard);
-                isFixed = true;
-            }
-        } else {
-            $('.content-explication').css({
-                "position": "fixed",
-                "top": 0,
-                "left": 0,
-            });
-            $('.content-explication h1, .content-explication p').css({
-                "opacity": 0.5
-            });
-        }
-
-        $('.sous-titre').addClass('content-explication-fixed');
-        $('.anime-card').removeClass('d-none').css('transform', 'translateY(' + translate + '%)');
+    if (middlePage === titlePosition){
+        $('.all-card').css('overflow', 'scroll');
+        $('.explication').css('opacity', 0.5);
     }
 
     $('.row-down').addClass('d-none');
@@ -137,7 +103,6 @@ $('#arrow-right').on('click', function () {
         $('.point').css('opacity', 0.2);
         nbrClick = nbrClick + 1;
         $('.point-' + nbrClick).css('opacity', 1);
-        console.log(nbrClick);
     }
 });
 
@@ -151,3 +116,7 @@ $('#arrow-left').on('click', function () {
         console.log(nbrClick);
     }
 });
+
+function scrollToTop() {
+    $(window).scrollTop(0);
+}
