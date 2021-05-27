@@ -541,7 +541,6 @@ body {
 .puzzle-content {
     display: flex;
     flex-direction: row;
-    height: 100vh;
 }
 
 .puzzle-achat {

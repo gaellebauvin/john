@@ -45,6 +45,7 @@ $('.btn-discover').on('click', function () {
 });
 
 var animationTerminate = false;
+var isFixed = false;
 
 $(window).on('scroll', function () {
     var windowScroll = $(window).scrollTop();
@@ -88,21 +89,26 @@ $(window).on('scroll', function () {
 
         var bottomCard = ($('.anime-card-4').offset().top) + ($('.anime-card-4').height());
 
-        if (windowScroll >= bottomCard || translate >= 10) {
-            if (windowScroll >= bottomCard) {
-                $('.temoignage-content').removeClass('d-none');
-                $('.test').addClass('d-none');
-                $('.all-card').addClass('d-none');
-            } else {
-                $('.test').removeClass('d-none');
-                $('.all-card').removeClass('d-none');
-            }
+        if (windowScroll >= bottomCard) {
+            $('.temoignage-content').removeClass('d-none');
+            $('.test').addClass('d-none');
+            $('.all-card').addClass('d-none');
             $('.content-explication').css({
                 "position": "relative"
             });
             $('.content-explication h1, .content-explication p').css({
-                "opacity" : 1
+                "opacity": 1
             });
+
+            if (isFixed === false) {
+                $('html, body').animate({
+                    scrollTop: $(".all-explication").offset().top
+                }, 1);
+                console.log($(".all-explication").offset().top);
+                console.log(windowScroll);
+                console.log(bottomCard);
+                isFixed = true;
+            }
         } else {
             $('.content-explication').css({
                 "position": "fixed",
@@ -110,7 +116,7 @@ $(window).on('scroll', function () {
                 "left": 0,
             });
             $('.content-explication h1, .content-explication p').css({
-                "opacity" : 0.5
+                "opacity": 0.5
             });
         }
 
@@ -124,24 +130,24 @@ $(window).on('scroll', function () {
 //animation du caroussel
 var positonLeft = 0;
 var nbrClick = 1;
-$('#arrow-right').on('click',function () {
+$('#arrow-right').on('click', function () {
     if (nbrClick < 4) {
         positonLeft = positonLeft - 66;
-        $('.caroussel').css({'left': positonLeft +'%'});
+        $('.caroussel').css({'left': positonLeft + '%'});
         $('.point').css('opacity', 0.2);
         nbrClick = nbrClick + 1;
-        $('.point-'+nbrClick).css('opacity',1);
+        $('.point-' + nbrClick).css('opacity', 1);
         console.log(nbrClick);
     }
 });
 
-$('#arrow-left').on('click',function () {
+$('#arrow-left').on('click', function () {
     if (nbrClick > 1) {
         positonLeft = positonLeft + 66;
-        $('.caroussel').css({'left': positonLeft +'%'});
+        $('.caroussel').css({'left': positonLeft + '%'});
         $('.point').css('opacity', 0.2);
         nbrClick = nbrClick - 1;
-        $('.point-'+nbrClick).css('opacity',1);
+        $('.point-' + nbrClick).css('opacity', 1);
         console.log(nbrClick);
     }
 });
